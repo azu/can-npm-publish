@@ -6,6 +6,11 @@ const shouldNotCalled = () => {
     throw new Error("SHOULD NOT CALLED");
 };
 describe("can-npm-publish", () => {
+    it("should be rejected, it is invalid name", () => {
+        return canNpmPublish(path.join(__dirname, "fixtures/invalid-name.json")).then(shouldNotCalled, error => {
+            assert.ok(/Invalid name/s.test(error.message));
+        });
+    });
     it("should be rejected, it is private:true", () => {
         return canNpmPublish(path.join(__dirname, "fixtures/private.json")).then(shouldNotCalled, error => {
             assert.ok(/This package is private/.test(error.message));
