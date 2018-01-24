@@ -50,7 +50,7 @@ For example, it is useful for using with [lerna](https://github.com/lerna/lerna 
 
 Publish all packages if it is possible.
 
-    lerna exec --bail=fase can-npm-publish && npm publish
+    lerna exec --bail=false can-npm-publish && npm publish
 
 ## Changelog
 
