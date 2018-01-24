@@ -1,6 +1,6 @@
 {
   "name": "can-npm-publish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command line tool that check to see if `npm publish` is possible.",
   "keywords": [
     "cli",
