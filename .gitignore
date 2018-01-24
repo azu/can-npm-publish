@@ -82,7 +82,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 
-/lib
 ### https://raw.github.com/github/gitignore/608690d6b9a78c2a003affc792e49a84905b3118/Node.gitignore
 
 # Logs
