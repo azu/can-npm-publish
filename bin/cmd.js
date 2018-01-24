@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+"use strict";
+const meow = require("meow");
+const canNpmPublish = require("../lib/can-npm-publish").canNpmPublish;
+const cli = meow(
+    `
+    Usage
+      $ can-npm-publish [directory|pacakge.json path]
+
+    Examples
+      $ can-npm-publish
+      $ echo $? # 0 or 1
+`,
+    {
+        flags: {
+            help: {
+                type: "boolean",
+                alias: "h"
+            },
+            verbose: {
+                type: "boolean"
+            }
+        }
+    }
+);
+if (cli.flags.help) {
+    cli.showHelp();
+}
+
+canNpmPublish(cli.input[0])
+    .then(() => {
+        process.exit(0);
+    })
+    .catch(error => {
+        if (cli.flags.verbose) {
+            console.log(error.message);
+        }
+        process.exit(1);
+    });
