@@ -4,8 +4,12 @@ A command line tool that check to see if `npm publish` is possible.
 
 ## Check list
 
-- [ ] Check that the package is not `private:true`
-- [ ] Check that `pacakge@version` is already published in npm registry
+All check list is passed, exit status will be `0`.
+
+- [x] Check that the package's name is valid
+    - [validate-npm-package-name](https://github.com/npm/validate-npm-package-name "validate-npm-package-name")
+- [x] Check that the package is not `private:true`
+- [x] Check that `pacakge@version` is already published in npm registry
 
 ## Install
 
@@ -15,11 +19,31 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
+    Usage
+      $ can-npm-publish [directory|pacakge.json path]
+
+    Options
+      --verbose  show detail of errors
+
+    Examples
+      $ can-npm-publish
+      $ echo $? # 0 or 1
+
+All check list is passed, exit status will be `0`.
+If has any error, exit status will be `1`.
+
+If you want to know detail of errors, you can use `--verbose` flag.
+
+    $ can-npm-publish --verbose
+    almin@0.13.10 is already published
+    $ echo $?
+    1
+
+### UseCase
+
 Run `can-npm-publish` before `npm publish`:
 
     can-npm-publish && npm publish
-    
-### UseCase
 
 You can use it for publishing without choice.
 For example, it is useful for using with [lerna](https://github.com/lerna/lerna "lerna").

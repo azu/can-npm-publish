@@ -7,6 +7,9 @@ const cli = meow(
     Usage
       $ can-npm-publish [directory|pacakge.json path]
 
+    Options
+      --verbose  show detail of errors
+
     Examples
       $ can-npm-publish
       $ echo $? # 0 or 1
