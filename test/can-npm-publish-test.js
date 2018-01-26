@@ -21,6 +21,11 @@ describe("can-npm-publish", () => {
             assert.ok(/is already published/.test(error.message));
         });
     });
+    it("should be rejected, it is already published scoped package", () => {
+        return canNpmPublish(path.join(__dirname, "fixtures/scoped-package.json")).then(shouldNotCalled, error => {
+            assert.ok(/is already published/.test(error.message));
+        });
+    });
     it("should be resolve, it is not published yet", () => {
         return canNpmPublish(path.join(__dirname, "fixtures/not-published-yet.json"));
     });
