@@ -32,7 +32,7 @@ Install with [npm](https://www.npmjs.com/):
 All check list is passed, exit status will be `0`.
 If has any error, exit status will be `1`.
 
-If you want to know detail of errors, you can use `--verbose` flag.
+If you want to know details of the error, you can use `--verbose` flag.
 
     $ can-npm-publish --verbose
     almin@0.13.10 is already published
@@ -46,11 +46,12 @@ Run `can-npm-publish` before `npm publish`:
     can-npm-publish && npm publish
 
 You can use it for publishing without choice.
+
 For example, it is useful for using with [lerna](https://github.com/lerna/lerna "lerna").
 
 Publish all packages if it is possible.
 
-    lerna exec --bail=false can-npm-publish && npm publish
+    lerna exec --bail=false -- can-npm-publish && npm publish
 
 ## Changelog
 
