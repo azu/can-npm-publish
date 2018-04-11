@@ -9,7 +9,7 @@ All check list is passed, exit status will be `0`.
 - [x] Check that the package's name is valid
     - [validate-npm-package-name](https://github.com/npm/validate-npm-package-name "validate-npm-package-name")
 - [x] Check that the package is not `private:true`
-- [x] Check that `pacakge@version` is already published in npm registry
+- [x] Check that `package@version` is already published in npm registry
 
 ## Install
 
