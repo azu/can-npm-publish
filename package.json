@@ -37,6 +37,7 @@
     "postcommit": "git reset"
   },
   "dependencies": {
+    "cross-spawn": "^6.0.5",
     "meow": "^4.0.0",
     "read-pkg": "^3.0.0",
     "validate-npm-package-name": "^3.0.0"
