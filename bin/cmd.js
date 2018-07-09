@@ -30,7 +30,9 @@ if (cli.flags.help) {
     cli.showHelp();
 }
 
-canNpmPublish(cli.input[0])
+canNpmPublish(cli.input[0], {
+    verbose: cli.flags.verbose
+})
     .then(() => {
         process.exit(0);
     })
