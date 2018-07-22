@@ -53,6 +53,9 @@ Publish all packages if it is possible.
 
     lerna exec --bail=false -- "can-npm-publish && npm publish"
 
+In this use-case, you should use [@monorepo-utils/publish](https://github.com/azu/monorepo-utils/blob/master/packages/@monorepo-utils/publish) instead of `can-npm-publish`.
+Because, [@monorepo-utils/publish](https://github.com/azu/monorepo-utils/blob/master/packages/@monorepo-utils/publish) wrapped `can-npm-publish`.
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/can-npm-publish/releases).
