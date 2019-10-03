@@ -38,7 +38,7 @@ canNpmPublish(cli.input[0], {
     })
     .catch(error => {
         if (cli.flags.verbose) {
-            console.log(error.message);
+            console.error(error.message);
         }
         process.exit(1);
     });
