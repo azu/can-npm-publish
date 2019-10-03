@@ -40,4 +40,22 @@ describe("can-npm-publish", () => {
     it("should be resolve, it is not published yet to yarnpkg registry", () => {
         return canNpmPublish(path.join(__dirname, "fixtures/not-published-yet-registry.json"));
     });
+    it("should warn when verbose, it is legacy name", () => {
+        const stderrWrite = process.stderr.write.bind(process.stderr);
+        let stderrOutput = "";
+
+        // Capture output to stderr in `stderrOutput`
+        process.stderr.write = (chunk, encoding, callback) => {
+            if (typeof chunk === "string") {
+                stderrOutput += chunk;
+            }
+        };
+
+        return canNpmPublish(path.join(__dirname, "fixtures/legacy-name.json"), { verbose: true }).then(() => {
+            // Restore stderr to normal
+            process.stderr.write = stderrWrite;
+
+            assert.ok(/name can no longer contain capital letters/.test(stderrOutput));
+        }, shouldNotCalled);
+    });
 });
