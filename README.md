@@ -20,7 +20,7 @@ Install with [npm](https://www.npmjs.com/):
 ## Usage
 
     Usage
-      $ can-npm-publish [directory|pacakge.json path]
+      $ can-npm-publish [directory|package.json path]
 
     Options
       --verbose  show detail of errors
