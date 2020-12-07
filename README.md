@@ -1,4 +1,4 @@
-# can-npm-publish [![Build Status](https://travis-ci.org/azu/can-npm-publish.svg?branch=master)](https://travis-ci.org/azu/can-npm-publish)
+# can-npm-publish [![Actions Status: test](https://github.com/azu/can-npm-publish/workflows/test/badge.svg)](https://github.com/azu/can-npm-publish/actions?query=workflow%3A"test")
 
 A command line tool that check to see if `npm publish` is possible.
 
