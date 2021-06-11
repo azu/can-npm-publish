@@ -32,9 +32,10 @@
   },
   "scripts": {
     "test": "mocha test",
-    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "precommit": "lint-staged",
-    "postcommit": "git reset"
+    "postcommit": "git reset",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepare": "git config --local core.hooksPath .githooks"
   },
   "dependencies": {
     "cross-spawn": "^7.0.3",
@@ -43,7 +44,6 @@
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
-    "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "mocha": "^9.0.0",
     "prettier": "^2.3.1"
@@ -51,12 +51,12 @@
   "prettier": {
     "singleQuote": false,
     "printWidth": 120,
-    "tabWidth": 4
+    "tabWidth": 4,
+    "trailingComma": "none"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
