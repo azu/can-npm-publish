@@ -51,11 +51,16 @@ describe("can-npm-publish", () => {
             }
         };
 
-        return canNpmPublish(path.join(__dirname, "fixtures/legacy-name.json"), { verbose: true }).then(() => {
-            // Restore stderr to normal
-            process.stderr.write = stderrWrite;
-
-            assert.ok(/name can no longer contain capital letters/.test(stderrOutput));
-        }, shouldNotCalled);
+        return canNpmPublish(path.join(__dirname, "fixtures/legacy-name.json"), { verbose: true }).then(
+            () => {
+                // Restore stderr to normal
+                process.stderr.write = stderrWrite;
+                assert.ok(/name can no longer contain capital letters/.test(stderrOutput));
+            },
+            (error) => {
+                console.log(error);
+                shouldNotCalled();
+            }
+        );
     });
 });
