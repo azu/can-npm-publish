@@ -38,7 +38,7 @@ describe("can-npm-publish", () => {
         return canNpmPublish(path.join(__dirname, "fixtures/not-published-yet.json"));
     });
     it("should be resolve, it is not 404 package", () => {
-        return canNpmPublish(path.join(__dirname, "fixtures/404-package.json"));
+        return canNpmPublish(path.join(__dirname, "fixtures/404-package.json"), { verbose: true });
     });
     it("should be resolve, it is not published yet to yarnpkg registry", () => {
         return canNpmPublish(path.join(__dirname, "fixtures/not-published-yet-registry.json"));

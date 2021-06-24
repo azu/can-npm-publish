@@ -373,6 +373,14 @@ execa@^5.0.0:
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
 
+extract-first-json@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/extract-first-json/-/extract-first-json-1.0.1.tgz#be828615ac0c83c982f22d8c93063e4f9dc2a356"
+  integrity sha512-L4XmAoZaHyXawEy8fJuLfIjRH9rG9D3bLz6fiMepVMiw/0Mpu+OSYH3/XmJ6sCPjui8a8ayz6c46fWlQFhdLvA==
+  dependencies:
+    parse-json-object "^2.0.0"
+    reduce-first "^1.0.1"
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -912,6 +920,13 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
+parse-json-object@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/parse-json-object/-/parse-json-object-2.0.1.tgz#a441bd8c36d2c33a69516286e7e4138a23607ee0"
+  integrity sha512-/oF7PUUBjCqHmMEE6xIQeX5ZokQ9+miudACzPt4KBU2qi6CxZYPdisPXx4ad7wpZJYi2ZpcW2PacLTU3De3ebw==
+  dependencies:
+    types-json "^1.2.0"
+
 parse-json@^5.0.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-5.2.0.tgz#c76fc66dee54231c962b22bcc8a72cf2f99753cd"
@@ -1009,6 +1024,11 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
+
+reduce-first@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/reduce-first/-/reduce-first-1.0.1.tgz#ef934f0dd4e010fdcaec2c51c9027722ee810c1c"
+  integrity sha512-/jBjEiF5Oe1xsa7CeCscbOIxSlFJcn4h1gj3OvUHPtxnThCbZ1Wh72uqO/o1zHNSGU4EgFclvCdc5TLJyt1hOQ==
 
 require-directory@^2.1.1:
   version "2.1.1"
@@ -1257,6 +1277,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+types-json@^1.2.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/types-json/-/types-json-1.2.2.tgz#91ebe6de59e741ab38a98b071708a29494cedfe6"
+  integrity sha512-VfVLISHypS7ayIHvhacOESOTib4Sm4mAhnsgR8fzQdGp89YoBwMqvGmqENjtYehUQzgclT+7NafpEXkK/MHKwA==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
