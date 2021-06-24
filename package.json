@@ -58,5 +58,9 @@
     "*.{js,jsx,ts,tsx,css}": [
       "prettier --write"
     ]
+  },
+  "volta": {
+    "node": "16.4.0",
+    "npm": "7.18.1"
   }
 }
