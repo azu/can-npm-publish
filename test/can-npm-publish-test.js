@@ -43,6 +43,9 @@ describe("can-npm-publish", () => {
     it("should be resolve, it is not published yet to yarnpkg registry", () => {
         return canNpmPublish(path.join(__dirname, "fixtures/not-published-yet-registry.json"));
     });
+    it("should be resolve, it is not the latest tag published yet", () => {
+        return canNpmPublish(path.join(__dirname, "fixtures/beta-only-dist-tag-package.json"));
+    });
     it("should warn when verbose, it is legacy name", () => {
         const stderrWrite = process.stderr.write.bind(process.stderr);
         let stderrOutput = "";
