@@ -4,6 +4,7 @@ env:
   CI: true
 permissions:
   contents: read
+  packages: read
 jobs:
   test:
     name: "Test on Node.js ${{ matrix.node-version }}"
