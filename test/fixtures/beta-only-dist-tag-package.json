@@ -1,0 +1,15 @@
+{
+  "name": "@azu/npm-beta-dist-tag-package",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "description": "",
+  "license": "MIT",
+  "author": "azu <azuciao@gmail.com>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
